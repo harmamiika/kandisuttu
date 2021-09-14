@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import { buildQueries } from '@testing-library/react';
+import React from 'react';
+import styled from 'styled-components';
 import './App.css';
 
-function App() {
+const Otsikko2 = styled.h2`
+  background-color: blue;
+`;
+
+const otsikko3 = { backgroundColor: 'blue' };
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2 className="otsikko">hei</h2>
+      <Otsikko2>hei</Otsikko2>
+      <h2 style={otsikko3}>hei</h2>
     </div>
   );
-}
+};
 
 export default App;
